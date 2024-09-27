@@ -1,43 +1,39 @@
 {
-    "albums": [
-      {
-        "id": 1,
-        "title": "Album One",
-        "coverPath": "covers/cover1.jpg", 
-        "songs": [1, 2]
-      },
-      {
-        "id": 2,
-        "title": "Album Two",
-        "coverPath": "covers/cover2.jpg", 
-        "songs": [3, 4]
-      }
-    ],
-    "songs": [
-      {
-        "id": 1,
-        "title": "Song One",
-        "artist": "Artist A",
-        "filePath": "songs/song1.mp3" 
-      },
-      {
-        "id": 2,
-        "title": "Song Two",
-        "artist": "Artist A",
-        "filePath": "songs/song2.mp3" 
-      },
-      {
-        "id": 3,
-        "title": "Song Three",
-        "artist": "Artist B",
-        "filePath": "songs/song3.mp3"
-      },
-      {
-        "id": 4,
-        "title": "Song Four",
-        "artist": "Artist B",
-        "filePath": "songs/song4.mp3" 
-      }
-    ]
-  }
-  
+  "albums": [
+    {
+      "id": 1,
+      "title": "Parachutes",
+      "coverPath": "covers/cover_parachutes.jpg",
+      "songs": [1, 2, 3, 4, 5, 6, 7, 8]
+    },
+    {
+      "id": 2,
+      "title": "A Head Full of Dreams",
+      "coverPath": "covers/cover_a_head_full_of_dreams.jpg",
+      "songs": [9, 10, 11, 12, 13]
+    },
+    {
+      "id": 3,
+      "title": "Ghost Stories",
+      "coverPath": "covers/cover_ghost_stories.jpg",
+      "songs": [14, 15, 16]
+    }
+  ],
+  "songs": [
+    { "id": 1, "title": "Don't Panic", "artist": "Coldplay", "filePath": "songs/song1.mp3" },
+    { "id": 2, "title": "Shiver", "artist": "Coldplay", "filePath": "songs/song2.mp3" },
+    { "id": 3, "title": "Yellow", "artist": "Coldplay", "filePath": "songs/song3.mp3" },
+    { "id": 4, "title": "Spies", "artist": "Coldplay", "filePath": "songs/song4.mp3" },
+    { "id": 5, "title": "Sparks", "artist": "Coldplay", "filePath": "songs/song5.mp3" },
+    { "id": 6, "title": "Parachutes", "artist": "Coldplay", "filePath": "songs/song6.mp3" },
+
+    { "id": 7, "title": "A Head Full of Dreams", "artist": "Coldplay", "filePath": "songs/song7.mp3" },
+    { "id": 8, "title": "Adventure of a Lifetime", "artist": "Coldplay", "filePath": "songs/song8.mp3" },
+    { "id": 9, "title": "Up&Up", "artist": "Coldplay", "filePath": "songs/song9.mp3" },
+    
+    { "id": 10, "title": "Always in My Head", "artist": "Coldplay", "filePath": "songs/song10.mp3" },
+    { "id": 11, "title": "Ink", "artist": "Coldplay", "filePath": "songs/song11.mp3" },
+    { "id": 12, "title": "A Sky Full of Stars", "artist": "Coldplay", "filePath": "songs/song12.mp3" },
+    { "id": 13, "title": "Ghost Stories", "artist": "Coldplay", "filePath": "songs/song13.mp3" }
+  ]
+}
