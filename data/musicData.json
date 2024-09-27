@@ -1,0 +1,43 @@
+{
+    "albums": [
+      {
+        "id": 1,
+        "title": "Album One",
+        "coverPath": "covers/cover1.jpg", 
+        "songs": [1, 2]
+      },
+      {
+        "id": 2,
+        "title": "Album Two",
+        "coverPath": "covers/cover2.jpg", 
+        "songs": [3, 4]
+      }
+    ],
+    "songs": [
+      {
+        "id": 1,
+        "title": "Song One",
+        "artist": "Artist A",
+        "filePath": "songs/song1.mp3" 
+      },
+      {
+        "id": 2,
+        "title": "Song Two",
+        "artist": "Artist A",
+        "filePath": "songs/song2.mp3" 
+      },
+      {
+        "id": 3,
+        "title": "Song Three",
+        "artist": "Artist B",
+        "filePath": "songs/song3.mp3"
+      },
+      {
+        "id": 4,
+        "title": "Song Four",
+        "artist": "Artist B",
+        "filePath": "songs/song4.mp3" 
+      }
+    ]
+  }
+  
