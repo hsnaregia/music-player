@@ -1,0 +1,22 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+*.log
+
+# Build output
+dist/
+build/
+
+# Environment variables
+.env
+
+# OS-specific files
+.DS_Store         # macOS
+Thumbs.db        # Windows
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
