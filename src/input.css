@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.box {
+    @apply rounded-lg  bg-gray-600 backdrop-blur-lg;
+}
+.show{
+    @apply flex;
+}
+
+.hide{
+    @apply hidden;
+}
