@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .box {
-    @apply rounded-lg  bg-gray-600 backdrop-blur-lg;
+    @apply rounded-lg  bg-layer-boxes backdrop-blur-lg;
 }
 .show{
     @apply flex;
@@ -11,4 +11,8 @@
 
 .hide{
     @apply hidden;
+}
+
+.sticky-navbar {
+    @apply w-[100%] sticky top-0 z-50  p-5 rounded-tr-full rounded-tl-full text-center;
 }

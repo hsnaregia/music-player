@@ -1,23 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/dist/output.css">
-    <title>music player</title>
-</head>
-<body class="w-[100dvw] h-auto bg-neonNight-midnightBlue flex justify-evenly  items-center flex-col">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/output.css" />
+    <title>Music Player</title>
+  </head>
+  <body
+    class="w-[100dvw] h-[100dvh] bg-layer-backg flex flex-col justify-center items-center"
+  >
+    <div class="w-full h-[30dvh]  p-10 show ">
+      <h1 class="w-full h-full bg-layer-boxes rounded-full font-sans justify-center items-center flex text-blue-950 font-extrabold  text-center ">Music Fa</h1>
+    </div>
     <!-- the main page is here -->
-     <div class="w-full h-[40vh] flex justify-center items-center">
-        <div class="w-[80%] h-[25vh] box p-5 m-5 show">
-            <img src="pic1.jpg" alt="first img" class=" w-full h-full">
+    <div class="w-full h-[50dvh] justify-center items-center overflow-hidden z-10 show">
+      <div class="w-[80%] h-[25vh] box p-5 m-5 show overflow-hidden" id="slider1">
+        <img src="pic1.jpg" alt="first img" class="w-full h-full" />
+      </div>
+      <div class="w-[80%] h-[25vh] box p-5 m-5 hide overflow-hidden" id="slider2">
+        <img src="pic2.jpg" alt="second img" class="w-full h-full" />
+      </div>
+      <div class="w-[80%] h-[25vh] box p-5 m-5 hide overflow-hidden" id="slider3">
+        <img src="pic3.jpg" alt="third img" class="w-full h-full" />
+      </div>
+    </div>
+
+    <!-- recommended musics -->
+    <div class="w-full h-[60dvh] show justify-around z-10 flex-col">
+    <h2 class="font-mono text-layer-txt font-semibold text-[1.3rem] w-full p-2">recommended Musics</h2>
+      <div class="w-full overflow-hidden h-[20dvh] flex flex-row justify-around items-center">
+        <div id="left-angle" class="w-[5%] h-[20%] justify-end items-center cursor-pointer">
+          <img src="left.png" alt="left">
         </div>
-        <div class="w-[80%] h-[25vh] box p-5 m-5 hide">
-            <img src="pic2.jpg" alt="first img" class=" w-full h-full ">
+        <div id="music-show-part" class="w-[70%] h-full">
+
         </div>
-        <div class="w-[80%] h-[25vh] box p-5 m-5 hide">
-            <img src="pic3.jpg" alt="first img" class=" w-full h-full">
+        <div id="right-angle" class="w-[5%] h-[20%] justify-center items-center cursor-pointer">
+          <img src="right.png" alt="right">
         </div>
-     </div>
-</body>
+      </div>
+    </div>
+
+    <!-- navbar section: make it sticky -->
+     <nav class="w-[100dvw] h-[25dvh] show flex-col justify-center items-center">
+       <div class="w-[100%] h-[15dvh] bg-layer-boxes sticky sticky-navbar top-0 z-50 justify-center items-center flex">
+          <div class="w-[85%] h-full mt-4 flex justify-evenly items-center flex-row">
+          <img src="" alt="Home" class="w-[12vw] h-[12vw]">
+          <img src="" alt="Artists" class="w-[12vw] h-[12vw] ">
+          <img src="" alt="Settings" class="w-[12vw] h-[12vw]"> 
+          </div>
+      </div>
+      <div class="w-full h-[10vh] hide">
+
+      </div>
+     </nav>
+
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>
