@@ -25,3 +25,27 @@ setInterval(nextSlide, 3000);
 showSlide(currentIndex); // Show the first 
 
 export { slideIds, currentIndex, showSlide, nextSlide };
+
+
+
+
+const navItemsId = ['home' , 'player' , 'user'];
+const navitems = navItemsId.map(id => document.getElementById(id));
+
+export function click(){
+  navitems.forEach(Element => {
+    if(Element){
+      Element.addEventListener('click' ,function(){
+        clear_look();
+        this.classList.add('activate');
+      })
+    }
+  })
+}
+
+function clear_look(){
+  for(let index = 0 ; index<navitems.length ; index++){
+    if(navitems[index].classList.contains('activate'))
+      navitems[index].classList.remove('activate');
+  }
+}
