@@ -20,3 +20,5 @@
 .activate{
     @apply  flex max-w-sm rounded-full p-2 bg-gradient-to-tr from-pink-300 to-blue-300  shadow-lg;
 }
+
+
