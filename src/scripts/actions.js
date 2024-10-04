@@ -49,3 +49,23 @@ function clear_look(){
       navitems[index].classList.remove('activate');
   }
 }
+
+const left_move = document.getElementById('left-angle');
+const right_move = document.getElementById('right-angle');
+const rec_sec = document.getElementById('rec-music-prt');
+
+export function move_around (){
+  
+ left_move.addEventListener('click',function(){
+  rec_sec.scrollBy({
+    left:-90 ,
+    behavior:"smooth"
+  });
+ }) ;
+ right_move.addEventListener('click',function (){
+    rec_sec.scrollBy({
+      left:90 ,
+      behavior:"smooth"
+    });
+ });
+}

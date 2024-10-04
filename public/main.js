@@ -1,11 +1,11 @@
 import { slideIds, currentIndex, showSlide, nextSlide , click} from '../src/scripts/actions.js';
 import { fetch_data } from '../server.js';
+import { move_around } from '../src/scripts/actions.js';
 showSlide(currentIndex);
 
 click();
 
 
-const MusicUrl = 'http://gr.vaxgame.top:3000/api/enartists/mohsenlorestani';
-
 
 fetch_data();
+move_around();

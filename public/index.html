@@ -8,13 +8,13 @@
     <title>Music Player</title>
   </head>
   <body
-    class="w-[100dvw] h-[100dvh] bg-layer-backg flex flex-col justify-center items-center"
+    class="w-[100dvw] h-[100dvh] bg-layer-backg flex flex-col items-center justify-center"
   >
-    <div class="w-full h-[30dvh]  p-10 show ">
+    <div class="w-full h-[30dvh]  p-10 hide ">
       <h1 class="w-full h-full bg-layer-boxes rounded-full font-sans justify-center items-center flex text-blue-950 font-extrabold  text-center ">MusiPly</h1>
     </div>
     <!-- the main page is here -->
-    <div class="w-full h-[50dvh] justify-center items-center overflow-hidden z-10 show">
+    <div class="w-full h-[50dvh] justify-center items-center overflow-hidden z-10 hide">
       <div class="w-[80%] h-[25vh] box p-5 m-5 show overflow-hidden" id="slider1">
         <img src="../src/assets/pic1.jpg" alt="first img" class="w-full h-full" />
       </div>
@@ -27,18 +27,18 @@
     </div>
 
     <!-- recommended musics -->
-    <div class="w-full h-[60dvh] show justify-around z-10 flex-col">
+    <div class="w-full h-[60dvh] hide justify-around z-10 flex-col">
     <h2 class="font-mono text-layer-txt font-semibold text-[1.3rem] w-full p-2">recommended Musics</h2>
    
    
    
     <div class="w-full  overflow-hidden h-[20dvh] flex flex-row justify-around items-center">
       
-      <div id="left-angle" class="w-[5%] h-[20%] justify-end items-center cursor-pointer">
-        <img src="../src/assets/left.png" alt="left">
+      <div  class="w-[5%] h-[20%] justify-end items-center cursor-pointer">
+        <img src="../src/assets/left.png" alt="left" id="left-angle">
       </div>
           
-      <div class="w-full h-full flex flex-row  items-center overflow-x-scroll overflow-y-hidden ">
+      <div class="w-full h-full flex flex-row  items-center overflow-x-scroll overflow-y-hidden scroll-smooth" id="rec-music-prt">
        
        
         <div class="h-[18dvh] w-[20dvw] bg-layer-boxes flex flex-col justify-between items-center m-2 rounded-[10px] box1">
@@ -99,22 +99,47 @@
         
       </div>
 
-          <div id="right-angle" class="w-[5%] h-[20%] justify-center items-center cursor-pointer">
-            <img src="../src/assets/right.png" alt="right">
+          <div  class="w-[5%] h-[20%] justify-center items-center cursor-pointer">
+            <img src="../src/assets/right.png" alt="right" id="right-angle">
         </div>
         </div>
       </div>
     </div>
 
+    <!-- here is the artist page  -->
+
+    <div class="w-full h-[75%] p-10 overflow-y-scroll justify-between items-center flex-col show ">
+     
+      <div class="w-full h-[20%] bg-layer-icons border-solid border-layer-boxes rounded-2xl p-2 flex justify-between flex-row scale-in-hor-left"> 
+        <img src="/src/assets/pic1.jpg" alt="pic" class=" w-[50%] h-full rounded-md">
+        <h3 class="w-[60%] h-full justify-center items-center flex font-bold text-layer-txt">rammstein</h3>
+      </div>
+      
+      <div class="w-full h-[20%] bg-layer-icons border-solid border-layer-boxes rounded-2xl p-2 flex justify-between flex-row scale-in-hor-left ">
+        <img src="/src/assets/pic3.jpg" alt="" class=" w-[50%] h-full rounded-md">
+        <h3 class=" w-[60%] h-full justify-center items-center flex font-bold text-layer-txt ">coldplay</h3>
+      </div>
+      
+      <div class="w-full h-[20%] bg-layer-icons border-solid border-layer-boxes rounded-2xl p-2 flex justify-between flex-row scale-in-hor-left ">
+        <img src="/src/assets/pic2.jpg" alt="" class=" w-[50%] h-full rounded-md">
+        <h3 class=" w-[60%] h-full justify-center items-center flex text-layer-txt font-bold">mohsen Lorestani</h3>
+      </div>
+      
+
+    </div>
+
+    <!-- end of artist page -->
+
+
     <!-- navbar section: make it sticky -->
-     <nav class="w-[100dvw] h-[25dvh] show flex-col justify-center items-center">
-       <div class="w-[100%] h-[15dvh] bg-layer-boxes sticky sticky-navbar top-0 z-50 justify-center items-center flex">
-          <div class="w-[85%] h-full mt-4 flex justify-evenly items-center flex-row ">
-            <div class="w-[12vw] h-[12vw]  ">
-              <img src="../src/assets/home.png" alt="Home" class="w-full h-full activate" id="home">
-            </div>
+     <nav class="w-[100dvw] h-[25dvh] show flex-col justify-end items-center">
+       <div class="w-[100%] h-[80%] bg-layer-boxes sticky sticky-navbar top-0 z-50 justify-center items-center flex">
+          <div class="w-[85%] h-[60%] mt-4 flex justify-evenly items-center flex-row ">
             <div class="w-[12vw] h-[12vw] ">
               <img src="../src/assets/user.png" alt="Artists" class="w-full h-full " id="user">
+            </div>
+            <div class="w-[12vw] h-[12vw]  ">
+              <img src="../src/assets/home.png" alt="Home" class="w-full h-full activate" id="home">
             </div>
             <div class="w-[12vw] h-[12vw] ">
               <img src="../src/assets/play.png" alt="play" class="w-full h-full" id="player"> 
@@ -122,8 +147,14 @@
           
           </div>
       </div>
-      <div class="w-full h-[10dvh] hide">
-
+      <div class="w-full h-[10dvh] bg-layer-boxes show flex justify-start items-center">
+        <img src="" alt="" class="w-[15dvw] h-full ">
+        <p class="w-[50vw] h-full bg-layer-boxes  flex justify-start items-center text-layer-icons font-bold pl-2">lorem</p>
+        <div class="w-[40dvw] h-full flex justify-center ">
+          <img src="/src/assets/backward.png" alt="" class="w-[10dvw] h-[10dvw] " >
+          <img src="/src/assets/play.png" alt="" class="w-[10dvw] h-[10dvw]">
+          <img src="/src/assets/forward.png" alt="" class="w-[10dvw] h-[10dvw]">
+        </div>
       </div>
      </nav>
 
