@@ -12,8 +12,8 @@
   >
 
   <div class="w-full h-[80%] show flex-col " id="main">
-
-    <div class="w-full h-[30dvh]  p-10 flex">
+    
+    <div class="w-full h-[30dvh]  p-10 flex focus-in-expand">
       <h1 class="w-full h-full bg-layer-boxes rounded-full font-sans justify-center items-center flex text-blue-950 font-extrabold  text-center ">MusiPly</h1>
     </div>
     <!-- the main page is here -->
@@ -31,7 +31,7 @@
 
     <!-- recommended musics -->
     <div class="w-full h-[60dvh] flex justify-around z-10 flex-col">
-    <h2 class="font-mono text-layer-txt font-semibold text-[1.3rem] w-full p-2">recommended Musics</h2>
+    <h2 class="font-mono text-layer-txt font-semibold text-[1.3rem] w-full p-2 scale-in-hor-left ">recommended Musics</h2>
    
    
    
@@ -108,7 +108,7 @@
         </div>
       </div>
     </div>
-  </div>
+
 
     <!-- here is the artists page  -->
 
@@ -142,8 +142,8 @@
 
 
     <!-- player section -->
-    <div class="w-full h-full bg-layer-boxes flex-col justify-around items-center hide">
-      <div class="w-full h-[5%] pl-2 pt-1"><img src="/src/assets/exit.png" alt="" id="close" class="w-[7vw] h-[7vw] "></div>
+    <div class="w-full h-full bg-layer-boxes flex-col justify-around items-center hide" id="play_sec">
+      <div class="w-full h-[5%] pl-2 pt-1"><img src="/src/assets/exit.png" alt="" id="close_player" class="w-[7vw] h-[7vw] "></div>
       <img src="" alt="music pic" class="bg-layer-icons w-[70%] h-[40%] rounded-xl p-2">
       <div class="bg-layer-icons w-[80%] h-[10%] p-3 m-2 rounded-xl flex flex-col justify-between items-center" id="character-box">
         <h2 class="w-[90%] h-[50%] text-layer-txt font-bold"></h2>
@@ -179,11 +179,11 @@
     <!-- end of player section -->
 
     <!-- navbar section: make it sticky -->
-     <nav class="w-[100dvw] h-[25dvh] show flex-col justify-end items-center">
+     <nav class="w-[100dvw] h-[25dvh] show flex-col justify-end items-center" id="stick_bot_nav">
        <div class="w-[100%] h-[80%] bg-layer-boxes sticky sticky-navbar top-0 z-50 justify-center items-center flex">
           <div class="w-[85%] h-[60%] mt-4 flex justify-evenly items-center flex-row ">
             <div class="w-[12vw] h-[12vw] ">
-              <img src="../src/assets/user.png" alt="Artists" class="w-full h-full " id="user">
+              <img src="../src/assets/user.png" alt="Artists" class="w-full h-full " id="artist">
             </div>
             <div class="w-[12vw] h-[12vw]  ">
               <img src="../src/assets/home.png" alt="Home" class="w-full h-full activate" id="home">

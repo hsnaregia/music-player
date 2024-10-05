@@ -27,27 +27,67 @@ showSlide(currentIndex); // Show the first
 export { slideIds, currentIndex, showSlide, nextSlide };
 
 
-
-
-const navItemsId = ['home' , 'player' , 'user'];
+const nav = document.getElementById('stick_bot_nav');
+const navItemsId = ['home' , 'player' , 'artist'];
+const nav_pagesId=['main' , 'artists' , 'play_sec'];
 const navitems = navItemsId.map(id => document.getElementById(id));
-
+const nav_pages = nav_pagesId.map(id => document.getElementById(id));
 export function click(){
   navitems.forEach(Element => {
     if(Element){
       Element.addEventListener('click' ,function(){
         clear_look();
         this.classList.add('activate');
+        if (this.id == 'home') {
+          nav_pages[0].classList.remove('hide');
+          nav_pages[0].classList.add('show');
+          nav.classList.remove('hide');
+          nav.classList.add('show');
+        } else if (this.id == 'player') {
+          nav_pages[2].classList.remove('hide');
+          nav_pages[2].classList.add('show');
+          nav.classList.remove('show');
+          nav.classList.add('hide');
+        } else if (this.id == 'artist') {
+          nav_pages[1].classList.remove('hide');
+          nav_pages[1].classList.add('show');
+          nav.classList.remove('hide');
+          nav.classList.add('show');
+        }
       })
     }
   })
 }
 
+export function comeBack() {
+  const back = document.getElementById('close_player'); 
+    back.addEventListener('click', function () {
+      nav_pages[2].classList.remove('show');
+      nav_pages[2].classList.add('hide');
+
+      nav_pages[0].classList.remove('hide');
+      nav_pages[0].classList.add('show');
+
+      nav.classList.add('show');
+      nav.classList.remove('hide');
+
+      navitems[0].classList.add('activate');
+      navitems[1].classList.remove('activate');
+    });
+}
+
 function clear_look(){
   for(let index = 0 ; index<navitems.length ; index++){
-    if(navitems[index].classList.contains('activate'))
+    if(navitems[index].classList.contains('activate')){
       navitems[index].classList.remove('activate');
+    }
   }
+  for(let index=0 ; index<nav_pages.length; index++){
+    if(nav_pages[index].classList.contains('show'))
+     { nav_pages[index].classList.remove('show')
+      nav_pages[index].classList.add('hide')
+    }
+    }
 }
 
 const left_move = document.getElementById('left-angle');
