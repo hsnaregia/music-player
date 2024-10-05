@@ -10,11 +10,14 @@
   <body
     class="w-[100dvw] h-[100dvh] bg-layer-backg flex flex-col items-center justify-center"
   >
-    <div class="w-full h-[30dvh]  p-10 hide ">
+
+  <div class="w-full h-[80%] show flex-col " id="main">
+
+    <div class="w-full h-[30dvh]  p-10 flex">
       <h1 class="w-full h-full bg-layer-boxes rounded-full font-sans justify-center items-center flex text-blue-950 font-extrabold  text-center ">MusiPly</h1>
     </div>
     <!-- the main page is here -->
-    <div class="w-full h-[50dvh] justify-center items-center overflow-hidden z-10 hide">
+    <div class="w-full h-[50dvh] justify-center items-center overflow-hidden z-10 flex">
       <div class="w-[80%] h-[25vh] box p-5 m-5 show overflow-hidden" id="slider1">
         <img src="../src/assets/pic1.jpg" alt="first img" class="w-full h-full" />
       </div>
@@ -27,7 +30,7 @@
     </div>
 
     <!-- recommended musics -->
-    <div class="w-full h-[60dvh] hide justify-around z-10 flex-col">
+    <div class="w-full h-[60dvh] flex justify-around z-10 flex-col">
     <h2 class="font-mono text-layer-txt font-semibold text-[1.3rem] w-full p-2">recommended Musics</h2>
    
    
@@ -105,10 +108,11 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- here is the artist page  -->
+    <!-- here is the artists page  -->
 
-    <div class="w-full h-[75%] p-10 overflow-y-scroll justify-between items-center flex-col show ">
+    <div class="w-full h-[75%] p-10 overflow-y-scroll justify-between items-center flex-col hide " id="artists">
      
       <div class="w-full h-[20%] bg-layer-icons border-solid border-layer-boxes rounded-2xl p-2 flex justify-between flex-row scale-in-hor-left"> 
         <img src="/src/assets/pic1.jpg" alt="pic" class=" w-[50%] h-full rounded-md">
@@ -128,8 +132,51 @@
 
     </div>
 
-    <!-- end of artist page -->
+    <!-- end of artists  page -->
 
+    
+    
+    <!-- each artist section -->
+
+    <!-- end of each artist section -->
+
+
+    <!-- player section -->
+    <div class="w-full h-full bg-layer-boxes flex-col justify-around items-center hide">
+      <div class="w-full h-[5%] pl-2 pt-1"><img src="/src/assets/exit.png" alt="" id="close" class="w-[7vw] h-[7vw] "></div>
+      <img src="" alt="music pic" class="bg-layer-icons w-[70%] h-[40%] rounded-xl p-2">
+      <div class="bg-layer-icons w-[80%] h-[10%] p-3 m-2 rounded-xl flex flex-col justify-between items-center" id="character-box">
+        <h2 class="w-[90%] h-[50%] text-layer-txt font-bold"></h2>
+        <h3 class="w-[90%] h-[50%] text-layer-txt font-extralight"></h3>
+      </div>
+
+      <div class="w-full h-[30%] p-4 flex flex-col">
+        <div class=" w-[100%] h-[40%]">
+
+        </div>
+
+        
+        <div class=" w-full h-[50%] flex flex-row justify-around items-center">
+          <div class="bg-layer-icons w-[15vw] h-[15vw] flex justify-center items-center rounded-full">
+            
+            <img src="../src/assets/backward.png" alt="back" class="w-[60%] h-[60%]">
+          </div>
+
+          <div class="bg-layer-icons w-[15vw] h-[15vw] flex justify-center items-center rounded-full">
+            
+            <img src="../src/assets/play.png" alt="play" class="w-[60%] h-[60%]">
+          </div>
+
+          <div class="bg-layer-icons w-[15vw] h-[15vw] flex justify-center items-center rounded-full">
+            
+            <img src="../src/assets/forward.png" alt="forward" class="w-[60%] h-[60%]">
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end of player section -->
 
     <!-- navbar section: make it sticky -->
      <nav class="w-[100dvw] h-[25dvh] show flex-col justify-end items-center">
@@ -147,7 +194,7 @@
           
           </div>
       </div>
-      <div class="w-full h-[10dvh] bg-layer-boxes show flex justify-start items-center">
+      <div class="w-full h-[10dvh] bg-layer-boxes hide flex justify-start items-center">
         <img src="" alt="" class="w-[15dvw] h-full ">
         <p class="w-[50vw] h-full bg-layer-boxes  flex justify-start items-center text-layer-icons font-bold pl-2">lorem</p>
         <div class="w-[40dvw] h-full flex justify-center ">
