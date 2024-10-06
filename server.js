@@ -1,13 +1,15 @@
-
+import { play } from "./src/scripts/play.js";
 
 const url = 'http://gr.vaxgame.top:3000';
 const rec_box_img = [];
 const rec_box_p = [];
-for(let index =0 ; index <11 ; index++){
-    rec_box_img[index] = document.querySelector(`.box${index+1} img`);
-    rec_box_p[index] = document.querySelector(`.box${index+1} p`);
-    console.log(rec_box_img[index]);
+for (let index = 0; index < 11; index++) {
+    rec_box_img[index] = document.querySelector(`.box${index + 1} img`);
+    rec_box_p[index] = document.querySelector(`.box${index + 1} p`);
+
+   
 }
+
 export async function fetch_data(){
     const res = await fetch(`${url}/api/enallsong`);
     const data = await res.json();
@@ -31,7 +33,15 @@ function recommended(data){
        
         
         rec_box_img[index].src = `${url}/${songs[index].cover}`;
+        console.log(`${url}/${songs[index].cover}`);
         rec_box_p[index].textContent=songs[index].name;
+        if (rec_box_p[index]) {
+            rec_box_p[index].addEventListener('click', () => {
+                console.log(data.songs[index].name ==(rec_box_p[index].textContent));
+                console.log(data.songs[index]);
+                play(data , songs[index].id);
+        });
+        }  
     }
 
 }
