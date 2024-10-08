@@ -1,6 +1,5 @@
-import { play } from "./src/scripts/play.js";
+import { play } from "../scripts/play.js";
 
-const url = 'http://gr.vaxgame.top:3000';
 const rec_box_img = [];
 const rec_box_p = [];
 for (let index = 0; index < 11; index++) {
@@ -10,13 +9,7 @@ for (let index = 0; index < 11; index++) {
    
 }
 
-export async function fetch_data(){
-    const res = await fetch(`${url}/api/enallsong`);
-    const data = await res.json();
-    recommended(data);
-}
-
-function recommended(data){
+export function recommended(data ,url){
     
     const songs = data.songs ;
     console.log(songs);
@@ -39,7 +32,7 @@ function recommended(data){
             rec_box_p[index].addEventListener('click', () => {
                 console.log(data.songs[index].name ==(rec_box_p[index].textContent));
                 console.log(data.songs[index]);
-                play(data , songs[index].id);
+                play(songs ,index);
         });
         }  
     }
