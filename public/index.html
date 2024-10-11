@@ -11,13 +11,13 @@
     class="w-[100dvw] h-[100dvh] bg-layer-backg flex flex-col items-center justify-center"
   >
 
-  <div class="w-full h-[80%] show flex-col " id="main">
+  <div class="w-full h-[80%] show flex-col justify-between " id="main">
     
-    <div class="w-full h-[30dvh]  p-10 flex focus-in-expand">
+    <div class="w-full h-[10dvh]  p-2 flex focus-in-expand">
       <h1 class="w-full h-full bg-layer-boxes rounded-full font-sans justify-center items-center flex text-blue-950 font-extrabold  text-center ">MusiPly</h1>
     </div>
     <!-- the main page is here -->
-    <div class="w-full h-[50dvh] justify-center items-center overflow-hidden z-10 flex">
+    <div class="w-full h-[30dvh] justify-center items-center overflow-hidden z-10 flex">
       <div class="w-[80%] h-[25vh] box p-5 m-5 show overflow-hidden" id="slider1">
         <img src="../src/assets/pic1.jpg" alt="first img" class="w-full h-full" />
       </div>
@@ -30,7 +30,7 @@
     </div>
 
     <!-- recommended musics -->
-    <div class="w-full h-[60dvh] flex justify-around z-10 flex-col">
+    <div class="w-full h-[30dvh] flex justify-around z-10 flex-col">
     <h2 class="font-mono text-layer-txt font-semibold text-[1.3rem] w-full p-2 scale-in-hor-left ">recommended Musics</h2>
    
    
@@ -162,17 +162,17 @@
 
         
         <div class=" w-full h-[50%] flex flex-row justify-around items-center">
-          <div class="bg-layer-icons w-[15vw] h-[15vw] flex justify-center items-center rounded-full" id="backward_btn"> 
+          <div class="bg-layer-icons w-[15vw] h-[15vw] flex justify-center items-center rounded-full backward_btn" > 
             
             <img src="../src/assets/backward.png" alt="back" class="w-[60%] h-[60%]" >
           </div>
 
-          <div class="bg-layer-icons w-[15vw] h-[15vw] flex justify-center items-center rounded-full" id="play_btn">
+          <div class="bg-layer-icons w-[15vw] h-[15vw] flex justify-center items-center rounded-full play_btn">
             
             <img src="../src/assets/play.png" alt="play" class="w-[60%] h-[60%]">
           </div>
 
-          <div class="bg-layer-icons w-[15vw] h-[15vw] flex justify-center items-center rounded-full" id="forward_btn">
+          <div class="bg-layer-icons w-[15vw] h-[15vw] flex justify-center items-center rounded-full forward_btn">
             
             <img src="../src/assets/forward.png" alt="forward" class="w-[60%] h-[60%]">
           </div>
@@ -185,8 +185,8 @@
 
     <!-- navbar section: make it sticky -->
      <nav class="w-[100dvw] h-[25dvh] show flex-col justify-end items-center" id="stick_bot_nav">
-       <div class="w-[100%] h-[80%] bg-layer-boxes sticky sticky-navbar top-0 z-50 justify-center items-center flex">
-          <div class="w-[85%] h-[60%] mt-4 flex justify-evenly items-center flex-row ">
+       <div class="w-[100%] h-[60%] bg-layer-boxes sticky sticky-navbar top-0 z-50 justify-center items-center flex">
+          <div class="w-[85%] h-[60%] mt-2 flex justify-evenly items-center flex-row ">
             <div class="w-[12vw] h-[12vw] ">
               <img src="../src/assets/user.png" alt="Artists" class="w-full h-full " id="artist">
             </div>
@@ -199,14 +199,21 @@
           
           </div>
       </div>
-      <div class="w-full h-[10dvh] bg-layer-boxes hide flex justify-start items-center">
-        <img src="" alt="" class="w-[15dvw] h-full ">
-        <p class="w-[50vw] h-full bg-layer-boxes  flex justify-start items-center text-layer-icons font-bold pl-2">lorem</p>
-        <div class="w-[40dvw] h-full flex justify-center ">
-          <img src="/src/assets/backward.png" alt="backward png" class="w-[10dvw] h-[10dvw] " >
-          <img src="/src/assets/play.png" alt="play png" class="w-[10dvw] h-[10dvw]">
-          <img src="/src/assets/forward.png" alt="forward png" class="w-[10dvw] h-[10dvw]">
-        </div>
+      <div class="w-full h-[8dvh] bg-layer-boxes hide flex justify-start items-center" id="small_player">
+        <img src="" alt="" class="w-[15dvw] h-[8dvh] rounded-md p-1" id="song_img">
+        <p class="w-[50vw] h-full bg-layer-boxes  flex justify-start items-center text-layer-icons font-bold pl-2" id="song_name"></p>
+        <div class="w-[40dvw] h-full flex justify-center">
+          <div class="forward_btn flex justify-center items-center">
+            <img src="/src/assets/backward.png" alt="backward png" class="w-[10dvw] h-[10dvw] " >
+          </div>
+          <div class="play_btn flex justify-center items-center">
+            <img src="/src/assets/play.png" alt="play png" class="w-[10dvw] h-[10dvw] ">
+          </div>
+          <div class="backward_btn flex justify-center items-center">
+            <img src="/src/assets/forward.png" alt="forward png" class="w-[10dvw] h-[10dvw] ">
+
+          </div>
+          </div>
       </div>
      </nav>
 

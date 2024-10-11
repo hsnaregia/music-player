@@ -6,27 +6,45 @@ const artist = document.getElementById('artist_name');
 const audio = document.getElementById('audio');
 const audiosource = document.getElementById('audioSource');
 
-const back  = document.getElementById('backward_btn');
-const playing = document.getElementById('play_btn');
-const forward = document.getElementById('forward_btn');
+const back  = document.querySelectorAll('.backward_btn');
+const playing = document.querySelectorAll('.play_btn');
+const forward = document.querySelectorAll('.forward_btn');
+
 let isplaying = false ;
 
+const image = document.getElementById('song_img');
+const name = document.getElementById('song_name');
 
+const mini =  document.getElementById('small_player');
+const nav = document.getElementById('stick_bot_nav');
 export function play(song_list , index){
    var count = index;
     
     MP();
-     isplaying =true;
+    isplaying =true;
+
     change_look(song_list,count);
-    back.addEventListener('click',function (){
-        count--;
-        change_look(count);
+    back.forEach((element) => {
+        element.addEventListener('click',function (){
+            count--;
+            change_look(song_list , count);
+            
+        })
     })
-    forward.addEventListener('click',function (){
+    forward.forEach((element) => {
+        element.addEventListener('click',function (){
+            count++;
+            change_look(song_list , count);
+           
+        })
+    })
+    audio.addEventListener('ended', function () {
         count++;
-        change_look(count);
-    })
+        if (count >= song_list.length) count = 0; 
+        change_look(song_list, count); 
+    });
     play_pause();
+    mini_player();
 }
 
 function media_play(src) {
@@ -40,22 +58,42 @@ function media_play(src) {
     });
 }
 
-function change_look(){
+function change_look(song_list , count){
     pic.src = `${url}/${song_list[count].cover}`;
     music.textContent= song_list[count].name; 
     artist.textContent= song_list[count].artist;
+
+    image.src =`${url}/${song_list[count].cover}` ;
+    name.textContent =song_list[count].name;
+
+
     media_play(song_list[count].src);
 }
 function play_pause(){
-    playing.addEventListener('click' , function() {
-        if(isplaying){
-            isplaying = false;
-            audio.pause();
-
-        }
-        else{
-            isplaying= true;
-            audio.play();
-        }
+    playing.forEach((element) => {
+        element.addEventListener('click' , function() {
+            if(isplaying){
+                isplaying = false;
+                audio.pause();
+    
+            }
+            else{
+                isplaying= true;
+                audio.play();
+            }
+        })
     })
 }
+
+function mini_player(){
+    if(isplaying){
+        nav.classList.contains('show');
+        mini.classList.add('show');
+        mini.classList.remove('hide');
+    }
+    else if(!isplaying || !nav.classList.contains('show')){
+        mini.classList.add('hide');
+        mini.classList.remove('show');
+    }
+}
+
