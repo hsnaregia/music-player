@@ -17,6 +17,8 @@ const name = document.getElementById('song_name');
 
 const mini =  document.getElementById('small_player');
 const nav = document.getElementById('stick_bot_nav');
+
+let intervalId; 
 export function play(song_list , index){
    var count = index;
     
@@ -43,14 +45,54 @@ export function play(song_list , index){
         if (count >= song_list.length) count = 0; 
         change_look(song_list, count); 
     });
+    
     play_pause();
     mini_player();
 }
+// ///////////////
+function music_timer(src) {
+    const totalTime= document.getElementById('total-Time');
+    const progressSlider = document.getElementById('progress');
+    audio.addEventListener('loadedmetadata', function() {
+        console.log( `Duration: ${audio.duration} seconds`);
+        const totalSeconds = audio.duration;
+        const minutes = Math.floor(totalSeconds / 60); 
+        const seconds = Math.floor(totalSeconds % 60);
+        totalTime.textContent = `${minutes}:${seconds}`;
+        timer(Math.floor(totalSeconds));
+    });
+    
+}
 
+function timer(total){
+    let currentTime = document.getElementById('current-Time');
+    let b=0 , c=0 , d=0;
+    let counter;
+    intervalId = setInterval(() => {
+       if(isplaying){ d++;
+        if(d==10){
+            d=0;
+            c++;
+            if(c==6&d==0){
+                c=0;
+                b++;
+            }
+        }
+        currentTime.textContent = `0${b}:${c}${d}`;  
+        
+    }else{
+            intervalId = clearInterval;
+            
+        }
+        
+    },1000);
+}
+////////////////////////
 function media_play(src) {
     audiosource.src = `${url}/stream/${src}`;
     audio.load();
     console.log(audiosource.src);
+    music_timer(src);
     audio.play().then(() => {
         console.log("Audio is playing.");
     }).catch(error => {
@@ -62,7 +104,6 @@ function change_look(song_list , count){
     pic.src = `${url}/${song_list[count].cover}`;
     music.textContent= song_list[count].name; 
     artist.textContent= song_list[count].artist;
-
     image.src =`${url}/${song_list[count].cover}` ;
     name.textContent =song_list[count].name;
 
