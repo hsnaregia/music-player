@@ -1,6 +1,37 @@
 const slideIds = ["slider1", "slider2", "slider3"];
 let currentIndex = 0;
+const ram = document.getElementById('ram_box');
+const cold = document.getElementById('cold_box');
+const mohsen = document.getElementById('mohsen_box')
+const smallplayer = document.getElementById('small_player');
+const artist = document.getElementById('artist');
+const artist_sec = document.getElementById('artists')
 
+////need implementation
+export function artists_page_oper(){
+  ram.addEventListener('click' , function (){
+    nav.classList.remove('show');
+    nav.classList.add('hide');
+    if(smallplayer.classList.contains('show'))
+    {
+      smallplayer.classList.add('hide');
+      smallplayer.classList.remove('show')
+    }
+    artist.classList.add('hide');
+    artist.classList.remove('show');
+    artist_sec.classList.add('show');
+    artist_sec.classList.remove('hide')
+  })
+
+  cold.addEventListener('click',function (){
+
+  })
+  mohsen.addEventListener('click' , function (){
+
+  })
+}
+
+///////////
 function showSlide(index) {
   slideIds.forEach((id, i) => {
     const slide = document.getElementById(id);

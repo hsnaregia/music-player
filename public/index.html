@@ -11,7 +11,7 @@
     class="w-[100dvw] h-[100dvh] bg-layer-backg flex flex-col items-center justify-center"
   >
 
-  <div class="w-full h-[80%] show flex-col justify-between " id="main">
+  <div class="w-full h-[80%] hide flex-col justify-between " id="main">
     
     <div class="w-full h-[10dvh]  p-2 flex focus-in-expand">
       <h1 class="w-full h-full bg-layer-boxes rounded-full font-sans justify-center items-center flex text-blue-950 font-extrabold  text-center ">MusiPly</h1>
@@ -114,17 +114,17 @@
 
     <div class="w-full h-[75%] p-10 overflow-y-scroll justify-between items-center flex-col hide " id="artists">
      
-      <div class="w-full h-[20%] bg-layer-icons border-solid border-layer-boxes rounded-2xl p-2 flex justify-between flex-row scale-in-hor-left"> 
+      <div class="w-full h-[20%] bg-layer-icons border-solid border-layer-boxes rounded-2xl p-2 flex justify-between flex-row scale-in-hor-left" id="ram_box"> 
         <img src="/src/assets/pic1.jpg" alt="pic" class=" w-[50%] h-full rounded-md">
         <h3 class="w-[60%] h-full justify-center items-center flex font-bold text-layer-txt">rammstein</h3>
       </div>
       
-      <div class="w-full h-[20%] bg-layer-icons border-solid border-layer-boxes rounded-2xl p-2 flex justify-between flex-row scale-in-hor-left ">
+      <div class="w-full h-[20%] bg-layer-icons border-solid border-layer-boxes rounded-2xl p-2 flex justify-between flex-row scale-in-hor-left " id="cold_box">
         <img src="/src/assets/pic3.jpg" alt="" class=" w-[50%] h-full rounded-md">
         <h3 class=" w-[60%] h-full justify-center items-center flex font-bold text-layer-txt ">coldplay</h3>
       </div>
       
-      <div class="w-full h-[20%] bg-layer-icons border-solid border-layer-boxes rounded-2xl p-2 flex justify-between flex-row scale-in-hor-left ">
+      <div class="w-full h-[20%] bg-layer-icons border-solid border-layer-boxes rounded-2xl p-2 flex justify-between flex-row scale-in-hor-left " id="mohsen_box">
         <img src="/src/assets/pic2.jpg" alt="" class=" w-[50%] h-full rounded-md">
         <h3 class=" w-[60%] h-full justify-center items-center flex text-layer-txt font-bold">mohsen Lorestani</h3>
       </div>
@@ -137,7 +137,32 @@
     
     
     <!-- each artist section -->
+    <div class="w-[100vw] h-full flex justify-start items-center flex-col " id="exit2">
+      <div class="w-full h-[35vh]  flex bg-cover flex-col" id="artist_page_pic">
+        <div class="w-10 h-10 "><img src="" alt="" class="p-5 w-full h-full"></div>
+        
+      </div>
+      
+      <div class="w-full h-full  flex justify-center items-center flex-col">
+          <p class="w-[90%] h-[26%] bg-layer-boxes m-5 rounded-2xl p-5 flex justify-end text-layer-icons font-bold" id="artist_info">
+            
+          </p>
+          <div class="w-[90%] h-[74%] flex flex-col gap-5">
 
+            <div class="w-full h-[20%] bg-layer-boxes rounded-2xl flex flex-row justify-between items-center p-2" id="music_box">
+              <img src="" alt="" class="w-[20%] h-[90%]  rounded-xl" id="artist_img_mini">
+              <div class="h-[90%] w-[75%] p-3" id="artists_music">
+                <h2 class="w-full font-extrabold" id="artist_music_mini"></h2>
+                <h3 class="w-full font-semibold" id="artist_name_mini"></h3>
+              </div>
+            </div>
+
+
+
+          </div>
+      </div>
+
+    </div>
     <!-- end of each artist section -->
 
 
@@ -188,7 +213,7 @@
     <!-- end of player section -->
 
     <!-- navbar section: make it sticky -->
-     <nav class="w-[100dvw] h-[25dvh] show flex-col justify-end items-center" id="stick_bot_nav">
+     <nav class="w-[100dvw] h-[25dvh] hide flex-col justify-end items-center" id="stick_bot_nav">
        <div class="w-[100%] h-[60%] bg-layer-boxes sticky sticky-navbar top-0 z-50 justify-center items-center flex">
           <div class="w-[85%] h-[60%] mt-2 flex justify-evenly items-center flex-row ">
             <div class="w-[12vw] h-[12vw] ">
