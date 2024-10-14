@@ -8,6 +8,7 @@ const play_sec = document.getElementById('play_sec');
 const navBar = document.getElementById('stick_bot_nav');
 const main = document.getElementById('main');
 const mediaPlayer = document.getElementById('player');
+const artist_sect = document.getElementById('art_sect');
 export function MP (){
         main.classList.add('hide');
         main.classList.remove('show');
@@ -15,6 +16,9 @@ export function MP (){
         play_sec.classList.remove('hide');
         navBar.classList.add('hide');
         navBar.classList.remove('show');
+        artist_sect.classList.add('hide');
+        artist_sect.classList.remove('show');
+
 }
 
 comeBack();

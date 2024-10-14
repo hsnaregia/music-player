@@ -1,33 +1,79 @@
+import { play } from "./play.js";
+import { artist_fetch } from "../services/config.js";
 const slideIds = ["slider1", "slider2", "slider3"];
 let currentIndex = 0;
 const ram = document.getElementById('ram_box');
 const cold = document.getElementById('cold_box');
 const mohsen = document.getElementById('mohsen_box')
 const smallplayer = document.getElementById('small_player');
-const artist = document.getElementById('artist');
+const artist = document.getElementById('art_sect');
 const artist_sec = document.getElementById('artists')
-
+const exit_page = document.getElementById('exit2');
 ////need implementation
-export function artists_page_oper(){
+export function artists_page_open(){
   ram.addEventListener('click' , function (){
     nav.classList.remove('show');
     nav.classList.add('hide');
-    if(smallplayer.classList.contains('show'))
-    {
-      smallplayer.classList.add('hide');
-      smallplayer.classList.remove('show')
-    }
-    artist.classList.add('hide');
-    artist.classList.remove('show');
-    artist_sec.classList.add('show');
-    artist_sec.classList.remove('hide')
+    // if(smallplayer.classList.contains('show'))
+    // {
+    //   smallplayer.classList.add('hide');
+    //   smallplayer.classList.remove('show')
+    // }
+    artist.classList.add('show');
+    artist.classList.remove('hide');
+    artist_sec.classList.add('hide');
+    artist_sec.classList.remove('show');
+    artist_fetch('ramstin');
+
+
   })
 
   cold.addEventListener('click',function (){
+    nav.classList.remove('show');
+    nav.classList.add('hide');
+    // if(smallplayer.classList.contains('show'))
+    // {
+    //   smallplayer.classList.add('hide');
+    //   smallplayer.classList.remove('show')
+    // }
+    artist.classList.add('show');
+    artist.classList.remove('hide');
+    artist_sec.classList.add('hide');
+    artist_sec.classList.remove('show');
+    artist_fetch('coldplay');
+
 
   })
   mohsen.addEventListener('click' , function (){
+    nav.classList.remove('show');
+    nav.classList.add('hide');
+    // if(smallplayer.classList.contains('show'))
+    // {
+    //   smallplayer.classList.add('hide');
+    //   smallplayer.classList.remove('show')
+    // }
+    artist.classList.add('show');
+    artist.classList.remove('hide');
+    artist_sec.classList.add('hide');
+    artist_sec.classList.remove('show');
+    artist_fetch('mohsenlorestani');
 
+
+
+  })
+
+  exit_page.addEventListener('click' , function(){
+    var artist_bkg = document.getElementById('artist_page_pic');
+    var Info = document.getElementById('artist_info');
+    
+    artist.classList.add('hide');
+    artist.classList.remove('show');
+    artist_sec.classList.add('show');
+    artist_sec.classList.remove('hide');
+    nav.classList.add('show');
+    nav.classList.remove('hide');
+    artist_bkg.style.backgroundImage= "url()";
+    Info.textContent = '';
   })
 }
 
@@ -104,6 +150,8 @@ export function comeBack() {
 
       navitems[0].classList.add('activate');
       navitems[1].classList.remove('activate');
+
+      
     });
 }
 

@@ -30,9 +30,8 @@ export function recommended(data ,url){
         rec_box_p[index].textContent=songs[index].name;
         if (rec_box_p[index]) {
             rec_box_p[index].addEventListener('click', () => {
-                console.log(data.songs[index].name ==(rec_box_p[index].textContent));
-                console.log(data.songs[index]);
-                play(songs ,index);
+                
+                play(songs ,index,songs.length);
         });
         }  
     }

@@ -19,16 +19,20 @@ const mini =  document.getElementById('small_player');
 const nav = document.getElementById('stick_bot_nav');
 
 let intervalId; 
-export function play(song_list , index){
+export function play(song_list , index ,end){
    var count = index;
     
     MP();
     isplaying =true;
-
+    
+    play_pause();
+    
     change_look(song_list,count);
     back.forEach((element) => {
         element.addEventListener('click',function (){
             count--;
+            if(count< 0)
+                count=song_list.length-1;
             change_look(song_list , count);
             
         })
@@ -36,6 +40,8 @@ export function play(song_list , index){
     forward.forEach((element) => {
         element.addEventListener('click',function (){
             count++;
+            if(count>song_list.length-1)
+                count = 0;
             change_look(song_list , count);
            
         })
@@ -46,7 +52,6 @@ export function play(song_list , index){
         change_look(song_list, count); 
     });
     
-    play_pause();
     mini_player();
 }
 // ///////////////
@@ -89,6 +94,7 @@ function timer(total){
 }
 ////////////////////////
 function media_play(src) {
+    
     audiosource.src = `${url}/stream/${src}`;
     audio.load();
     console.log(audiosource.src);
@@ -101,6 +107,7 @@ function media_play(src) {
 }
 
 function change_look(song_list , count){
+    console.log(count);
     pic.src = `${url}/${song_list[count].cover}`;
     music.textContent= song_list[count].name; 
     artist.textContent= song_list[count].artist;
@@ -109,8 +116,9 @@ function change_look(song_list , count){
 
 
     media_play(song_list[count].src);
+    
 }
-function play_pause(){
+export function play_pause(){
     playing.forEach((element) => {
         element.addEventListener('click' , function() {
             if(isplaying){
