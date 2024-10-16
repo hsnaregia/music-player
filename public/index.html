@@ -139,15 +139,15 @@
     <!-- each artist section -->
     <div class="w-[100vw] h-full hide justify-start items-center flex-col "  id="art_sect">
       <div class="w-full h-[35vh]  flex bg-cover flex-col" id="artist_page_pic">
-        <div class="w-20 h-20 "><img src="../src/assets/exit.png" alt="" class="p-5 w-full h-full" id="exit2"></div>
+        <div class="w-20 h-20 "><img src="../src/assets/exit.png" alt="" class="p-5 w-full h-full scale-up-center" id="exit2"></div>
         
       </div>
       
-      <div class="w-full h-full  flex justify-center items-center flex-col">
+      <div class="w-full h-full  flex justify-center items-center flex-col scale-in-hor-left">
           <p class="w-[90%] h-[26%] bg-layer-boxes m-5 rounded-2xl p-5 flex justify-end text-layer-icons font-bold" id="artist_info">
             
           </p>
-          <div class="w-[90%] h-[74%] flex flex-col gap-5" id="music_container" >
+          <div class="w-[90%] h-[74%] flex flex-col gap-5 scale-in-center" id="music_container" >
 
            
 
@@ -157,7 +157,7 @@
       </div>
       <div class="hide">
         <div class="w-full h-[20%] bg-layer-boxes rounded-2xl flex flex-row justify-between items-center p-2" id="music_box">
-          <img src="" alt="" class="w-[20%] h-[90%]  rounded-xl" id="artist_img_mini">
+          <img src="" alt="" class="w-[20%] h-[90%]  rounded-xl " id="artist_img_mini">
           <div class="h-[90%] w-[75%] p-3" id="artists_music">
             <h2 class="w-full font-extrabold" id="artist_music_mini"></h2>
             <h3 class="w-full font-semibold" id="artist_name_mini"></h3>
@@ -169,9 +169,9 @@
 
 
     <!-- player section -->
-    <div class="w-full h-full bg-layer-boxes flex-col justify-around items-center hide" id="play_sec">
-      <div class="w-full h-[5%] pl-2 pt-1"><img src="/src/assets/exit.png" alt="" id="close_player" class="w-[7vw] h-[7vw] "></div>
-      <img src="" alt="music pic" class="bg-layer-icons w-[70%] h-[40%] rounded-xl p-2" id="cover">
+    <div class="w-full h-full bg-layer-boxes flex-col justify-around items-center hide " id="play_sec">
+      <div class="w-full h-[5%] pl-2 pt-1 scale-up-center"><img src="/src/assets/exit.png" alt="" id="close_player" class="w-[7vw] h-[7vw] scale-up-center"></div>
+      <img src="" alt="music pic" class="bg-layer-icons w-[70%] h-[40%] rounded-xl p-2 scale-up-center" id="cover">
       <div class="bg-layer-icons w-[80%] h-[10%] p-3 m-2 rounded-xl flex flex-col justify-between items-center" id="character-box">
         <h2 class="w-[90%] h-[50%] text-layer-txt font-bold" id="music_name"></h2>
         <h3 class="w-[90%] h-[50%] text-layer-txt font-extralight" id="artist_name"></h3>
@@ -182,7 +182,7 @@
         مرورگر شما از پخش صوتی پشتیبانی نمی‌کند.
       </audio>
 
-      <div class="w-full h-[30%] p-4 flex flex-col" >
+      <div class="w-full h-[30%] p-4 flex flex-col " >
         <div class=" w-[100%] h-[40%] flex justify-between items-center flex-col">
           <div class="flex justify-around items-center w-[80%] h-full">
             <span class="font-bold bg-layer-icons rounded-md text-layer-txt w-10 flex justify-center items-center" id="current-Time"></span>
@@ -195,17 +195,20 @@
         <div class=" w-full h-[50%] flex flex-row justify-around items-center">
           <div class="bg-layer-icons w-[15vw] h-[15vw] flex justify-center items-center rounded-full backward_btn" > 
             
-            <img src="../src/assets/backward.png" alt="back" class="w-[60%] h-[60%]" >
+            <img src="../src/assets/backward.png" alt="back" class="w-[60%] h-[60%] scale-up-center" >
           </div>
 
-          <div class="bg-layer-icons w-[15vw] h-[15vw] flex justify-center items-center rounded-full play_btn">
+          <div class="bg-layer-icons w-[15vw] h-[15vw] show justify-center items-center rounded-full play_btn" id="play_media_btn">
             
-            <img src="../src/assets/play.png" alt="play" class="w-[60%] h-[60%]">
+            <img src="../src/assets/pause.png" alt="play" class="w-[60%] h-[60%] scale-up-center">
           </div>
-
+          <div class="bg-layer-icons w-[15vw] h-[15vw] hide justify-center items-center rounded-full play_btn" id="play_media_btn2">
+            
+            <img src="../src/assets/play.png" alt="play" class="w-[60%] h-[60%] scale-up-center">
+          </div>
           <div class="bg-layer-icons w-[15vw] h-[15vw] flex justify-center items-center rounded-full forward_btn">
             
-            <img src="../src/assets/forward.png" alt="forward" class="w-[60%] h-[60%]">
+            <img src="../src/assets/forward.png" alt="forward" class="w-[60%] h-[60%] scale-up-center">
           </div>
           </div>
         </div>
@@ -225,7 +228,7 @@
               <img src="../src/assets/home.png" alt="Home" class="w-full h-full activate" id="home">
             </div>
             <div class="w-[12vw] h-[12vw] ">
-              <img src="../src/assets/play.png" alt="play" class="w-full h-full" id="player"> 
+              <img src="../src/assets/play1.png" alt="play" class="w-full h-full" id="player"> 
             </div>
           
           </div>
@@ -235,13 +238,16 @@
         <p class="w-[50vw] h-full bg-layer-boxes  flex justify-start items-center text-layer-icons font-bold pl-2" id="song_name"></p>
         <div class="w-[40dvw] h-full flex justify-center">
           <div class="forward_btn flex justify-center items-center">
-            <img src="/src/assets/backward.png" alt="backward png" class="w-[10dvw] h-[10dvw] " >
+            <img src="/src/assets/backward1.png" alt="backward png" class="w-[10dvw] h-[10dvw] " >
           </div>
-          <div class="play_btn flex justify-center items-center">
-            <img src="/src/assets/play.png" alt="play png" class="w-[10dvw] h-[10dvw] ">
+          <div class="play_btn show justify-center items-center" id="play_media_btn3">
+            <img src="/src/assets/pause1.png" alt="play png" class="w-[10dvw] h-[10dvw] ">
+          </div>
+          <div class="play_btn hide justify-center items-center" id="play_media_btn4">
+            <img src="/src/assets/play1.png" alt="play png" class="w-[10dvw] h-[10dvw] ">
           </div>
           <div class="backward_btn flex justify-center items-center">
-            <img src="/src/assets/forward.png" alt="forward png" class="w-[10dvw] h-[10dvw] ">
+            <img src="/src/assets/forward1.png" alt="forward png" class="w-[10dvw] h-[10dvw] ">
 
           </div>
           </div>

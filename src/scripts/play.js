@@ -17,6 +17,11 @@ const name = document.getElementById('song_name');
 
 const mini =  document.getElementById('small_player');
 const nav = document.getElementById('stick_bot_nav');
+const play_btn=document.getElementById('play_media_btn');
+const pause_btn=document.getElementById('play_media_btn2');
+const play_btn1=document.getElementById('play_media_btn3');
+const pause_btn1=document.getElementById('play_media_btn4');
+
 
 let intervalId; 
 export function play(song_list , index ,end){
@@ -94,6 +99,15 @@ function timer(total){
 }
 ////////////////////////
 function media_play(src) {
+    play_btn.classList.remove('hide');
+    play_btn.classList.add('show');
+    pause_btn.classList.add('hide');
+    pause_btn.classList.remove('show');
+    
+    play_btn1.classList.remove('hide');
+    play_btn1.classList.add('show');
+    pause_btn1.classList.add('hide');
+    pause_btn1.classList.remove('show');
     
     audiosource.src = `${url}/stream/${src}`;
     audio.load();
@@ -122,11 +136,28 @@ export function play_pause(){
     playing.forEach((element) => {
         element.addEventListener('click' , function() {
             if(isplaying){
+                play_btn.classList.remove('show');
+                play_btn.classList.add('hide');
+                pause_btn.classList.add('show');
+                pause_btn.classList.remove('hide');
+
+                play_btn1.classList.remove('show');
+                play_btn1.classList.add('hide');
+                pause_btn1.classList.add('show');
+                pause_btn1.classList.remove('hide');
                 isplaying = false;
                 audio.pause();
-    
             }
             else{
+                play_btn.classList.remove('hide');
+                play_btn.classList.add('show');
+                pause_btn.classList.add('hide');
+                pause_btn.classList.remove('show');
+
+                play_btn1.classList.remove('hide');
+                play_btn1.classList.add('show');
+                pause_btn1.classList.add('hide');
+                pause_btn1.classList.remove('show');
                 isplaying= true;
                 audio.play();
             }

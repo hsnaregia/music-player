@@ -9,16 +9,15 @@ const smallplayer = document.getElementById('small_player');
 const artist = document.getElementById('art_sect');
 const artist_sec = document.getElementById('artists')
 const exit_page = document.getElementById('exit2');
-////need implementation
+
+
+
+
 export function artists_page_open(){
   ram.addEventListener('click' , function (){
     nav.classList.remove('show');
     nav.classList.add('hide');
-    // if(smallplayer.classList.contains('show'))
-    // {
-    //   smallplayer.classList.add('hide');
-    //   smallplayer.classList.remove('show')
-    // }
+
     artist.classList.add('show');
     artist.classList.remove('hide');
     artist_sec.classList.add('hide');
@@ -31,11 +30,7 @@ export function artists_page_open(){
   cold.addEventListener('click',function (){
     nav.classList.remove('show');
     nav.classList.add('hide');
-    // if(smallplayer.classList.contains('show'))
-    // {
-    //   smallplayer.classList.add('hide');
-    //   smallplayer.classList.remove('show')
-    // }
+
     artist.classList.add('show');
     artist.classList.remove('hide');
     artist_sec.classList.add('hide');
@@ -47,11 +42,7 @@ export function artists_page_open(){
   mohsen.addEventListener('click' , function (){
     nav.classList.remove('show');
     nav.classList.add('hide');
-    // if(smallplayer.classList.contains('show'))
-    // {
-    //   smallplayer.classList.add('hide');
-    //   smallplayer.classList.remove('show')
-    // }
+
     artist.classList.add('show');
     artist.classList.remove('hide');
     artist_sec.classList.add('hide');
